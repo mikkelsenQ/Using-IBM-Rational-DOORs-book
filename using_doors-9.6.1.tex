@@ -1,0 +1,943 @@
+\documentclass[11pt,a4paper]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%IMPORTED PACKAGES%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Modifies margins
+\usepackage[a4paper,bindingoffset=0.0in,left=0.8in,right=0.8in,top=0.75in,bottom=0.75in,footskip=.1in]{geometry}
+%Side margins between 0.75 and 1 in
+
+%Necessary for some symbols
+\usepackage{amssymb}
+
+%Disable paragraph indentation
+\setlength{\parindent}{0pt}
+
+%To add hyperlinks
+\usepackage{hyperref}
+
+%To avoid the hyperlinks having ugly boxes around them
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%END IMPORTED PACKAGES%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%START OF DOCUMENT%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\begin{center}
+
+
+\textbf{\begin{LARGE}Using IBM Rational DOORs (9.6.1)\end{LARGE}}
+
+\end{center}
+
+This document attempts to replicate the latest \href{https://www.ibm.com/support/pages/rational-doors-documentation-library#using92}{"Using IBM DOORs" book (v. 9.2)}, which has been replaced by the IBM Knowledge Center. It does so by using the 9.2's book index and redirecting the user to the \href{https://www.ibm.com/support/knowledgecenter/search/example%20search?scope=SSYQBZ_9.6.1}{IBM Knowledge Center} with the appropriate search query. The source code of this \LaTeX  file can be found \href{https://github.com/mikkelsenQ/Using-IBM-Rational-DOORs-book}{here}. \\
+
+\begin{Large}\textbf{Chapter 1: About this manual} \end{Large} 
+\vspace{1mm}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Typographical%20conventions?scope=SSYQBZ_9.6.1}{Typographical conventions}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Related%20documentation?scope=SSYQBZ_9.6.1}{Related documentation} \\
+
+
+\begin{Large}\textbf{Chapter 2: Basics} \end{Large} 
+\vspace{1mm}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Starting%20Rational%20DOORS?scope=SSYQBZ_9.6.1}{Starting Rational DOORS}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Changing%20the%20Database%20Explorer%20display?scope=SSYQBZ_9.6.1}{Changing the Database Explorer display}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Making%20selections%20in%20the%20Database%20Explorer?scope=SSYQBZ_9.6.1}{Making selections in the Database Explorer}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Selecting%20multiple%20items?scope=SSYQBZ_9.6.1}{Selecting multiple items}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Changing%20the%20appearance%20of%20the%20Database%20Explorer%20toolbar?scope=SSYQBZ_9.6.1}{Changing the appearance of the Database Explorer toolbar}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Changing%20the%20appearance%20of%20the%20module%20toolbar?scope=SSYQBZ_9.6.1}{Changing the appearance of the module toolbar}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/The%20Location%20field?scope=SSYQBZ_9.6.1}{The Location field}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Favorites?scope=SSYQBZ_9.6.1}{Favorites}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Organizing%20your%20favorites%20list?scope=SSYQBZ_9.6.1}{Organizing your favorites list}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/How%20changes%20to%20the%20database%20affect%20Favorites?scope=SSYQBZ_9.6.1}{How changes to the database affect Favorites}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Opening%20a%20module?scope=SSYQBZ_9.6.1}{Opening a module}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Requesting%20a%20module%20lock?scope=SSYQBZ_9.6.1}{Requesting a module lock}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Rational%20DOORS%20URLs?scope=SSYQBZ_9.6.1}{Rational DOORS URLs}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Following%20a%20Rational%20DOORS%20URL?scope=SSYQBZ_9.6.1}{Following a Rational DOORS URL}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Making%20selections%20in%20a%20module%20window?scope=SSYQBZ_9.6.1}{Making selections in a module window}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Selecting%20multiple%20objects?scope=SSYQBZ_9.6.1}{Selecting multiple objects}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Selecting%20everything?scope=SSYQBZ_9.6.1}{Selecting everything}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Using%20drag-and-drop?scope=SSYQBZ_9.6.1}{Using drag-and-drop}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/In%20the%20Database%20Explorer?scope=SSYQBZ_9.6.1}{In the Database Explorer}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/In%20a%20module%20window?scope=SSYQBZ_9.6.1}{In a module window}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Cutting,%20copying%20and%20pasting?scope=SSYQBZ_9.6.1}{Cutting, copying and pasting}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/In%20the%20Database%20Explorer?scope=SSYQBZ_9.6.1}{In the Database Explorer}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/In%20a%20module%20window?scope=SSYQBZ_9.6.1}{In a module window}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Closing%20a%20module?scope=SSYQBZ_9.6.1}{Closing a module}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Stopping%20Rational%20DOORS?scope=SSYQBZ_9.6.1}{Stopping Rational DOORS} \\
+
+
+
+\begin{Large}\textbf{Chapter 3: Managing formal modules} \end{Large} 
+\vspace{1mm}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Creating%20a%20formal%20module?scope=SSYQBZ_9.6.1}{Creating a formal module}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Controlling%20access%20to%20a%20formal%20module?scope=SSYQBZ_9.6.1}{Controlling access to a formal module}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Creating%20a%20new%20module%20using%20paste%20special?scope=SSYQBZ_9.6.1}{Creating a new module using paste special}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Showing%20module%20properties?scope=SSYQBZ_9.6.1}{Showing module properties}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Showing%20module%20statistics?scope=SSYQBZ_9.6.1}{Showing module statistics}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Deleting,%20undeleting%20and%20purging%20a%20module?scope=SSYQBZ_9.6.1}{Deleting, undeleting and purging a module}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Managing%20open%20modules?scope=SSYQBZ_9.6.1}{Managing open modules} \\
+
+
+
+\newpage
+
+\begin{Large}\textbf{Chapter 4: Editing} \end{Large} 
+\vspace{1mm}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Edit%20modes?scope=SSYQBZ_9.6.1}{Edit modes}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Changing%20the%20edit%20mode?scope=SSYQBZ_9.6.1}{Changing the edit mode}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Editable%20sections?scope=SSYQBZ_9.6.1}{Editable sections}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Setting%20up%20a%20module%20for%20sharing?scope=SSYQBZ_9.6.1}{Setting up a module for sharing}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Working%20in%20shareable%20edit%20mode?scope=SSYQBZ_9.6.1}{Working in shareable edit mode}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Saving%20changes%20when%20editing%20in%20shareable%20mode?scope=SSYQBZ_9.6.1}{Saving changes when editing in shareable mode}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Colors%20of%20locked%20and%20unlocked%20sections?scope=SSYQBZ_9.6.1}{Colors of locked and unlocked sections}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Requesting%20a%20section%20lock?scope=SSYQBZ_9.6.1}{Requesting a section lock}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/In-place%20editing?scope=SSYQBZ_9.6.1}{In-place editing}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Selecting%20and%20editing?scope=SSYQBZ_9.6.1}{Selecting and editing}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Formatting%20text?scope=SSYQBZ_9.6.1}{Formatting text}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Cut,%20copy%20and%20paste?scope=SSYQBZ_9.6.1}{Cut, copy and paste}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Editing%20using%20the%20object%20properties%20sheet?scope=SSYQBZ_9.6.1}{Editing using the object properties sheet}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Undoing%20edits?scope=SSYQBZ_9.6.1}{Undoing edits}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Extended%20undo?scope=SSYQBZ_9.6.1}{Extended undo}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Saving%20your%20changes?scope=SSYQBZ_9.6.1}{Saving your changes}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Creating%20objects?scope=SSYQBZ_9.6.1}{Creating objects}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Controlling%20access%20to%20an%20object?scope=SSYQBZ_9.6.1}{Controlling access to an object}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Promoting%20and%20demoting%20objects?scope=SSYQBZ_9.6.1}{Promoting and demoting objects}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Swapping%20Object%20Heading%20and%20Object%20Text%20attributes?scope=SSYQBZ_9.6.1}{Swapping Object Heading and Object Text attributes}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Splitting%20Object%20Heading%20from%20Object%20Text?scope=SSYQBZ_9.6.1}{Splitting Object Heading from Object Text}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Deleting,%20undeleting,%20and%20purging%20objects?scope=SSYQBZ_9.6.1}{Deleting, undeleting, and purging objects}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/The%20spelling%20checker?scope=SSYQBZ_9.6.1}{The spelling checker}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Checking%20spelling?scope=SSYQBZ_9.6.1}{Checking spelling}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Inserting%20symbols?scope=SSYQBZ_9.6.1}{Inserting symbols}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Inserting%20URLs?scope=SSYQBZ_9.6.1}{Inserting URLs}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Inserting%20templates?scope=SSYQBZ_9.6.1}{Inserting templates}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Splitting%20objects?scope=SSYQBZ_9.6.1}{Splitting objects}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Copying%20objects?scope=SSYQBZ_9.6.1}{Copying objects}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Merging%20object%20text?scope=SSYQBZ_9.6.1}{Merging object text} \\
+
+
+
+\begin{Large}\textbf{Chapter 5: Editing using forms} \end{Large} 
+\vspace{1mm}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Forms?scope=SSYQBZ_9.6.1}{Forms}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Creating%20a%20new%20form?scope=SSYQBZ_9.6.1}{Creating a new form}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Editing%20forms?scope=SSYQBZ_9.6.1}{Editing forms}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Running%20forms?scope=SSYQBZ_9.6.1}{Running forms}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Deleting%20forms?scope=SSYQBZ_9.6.1}{Deleting forms} \\
+
+
+
+\begin{Large}\textbf{Chapter 6: Using views} \end{Large} 
+\vspace{1mm}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Views?scope=SSYQBZ_9.6.1}{Views}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Saving%20your%20current%20view?scope=SSYQBZ_9.6.1}{Saving your current view}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Inheritance%20in%20views?scope=SSYQBZ_9.6.1}{Inheritance in views}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Views%20inheritance%20and%20access%20controls?scope=SSYQBZ_9.6.1}{Views inheritance and access controls}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Setting%20default%20views?scope=SSYQBZ_9.6.1}{Setting default views}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Editing%20a%20view?scope=SSYQBZ_9.6.1}{Editing a view}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Controlling%20access%20to%20a%20view?scope=SSYQBZ_9.6.1}{Controlling access to a view}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Deleting%20a%20view?scope=SSYQBZ_9.6.1}{Deleting a view} \\
+
+\newpage
+
+\begin{Large}\textbf{Chapter 7: Finding, filtering and sorting} \end{Large} 
+\vspace{1mm}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Searching%20the%20database?scope=SSYQBZ_9.6.1}{Searching the database}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Finding%20text%20in%20a%20module?scope=SSYQBZ_9.6.1}{Finding text in a module}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Finding%20and%20replacing%20text?scope=SSYQBZ_9.6.1}{Finding and replacing text}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Going%20to%20a%20particular%20object?scope=SSYQBZ_9.6.1}{Going to a particular object}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Filters?scope=SSYQBZ_9.6.1}{Filters}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Simple%20filters?scope=SSYQBZ_9.6.1}{Simple filters}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Advanced%20filters?scope=SSYQBZ_9.6.1}{Advanced filters}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Using%20a%20simple%20filter?scope=SSYQBZ_9.6.1}{Using a simple filter}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Statistics?scope=SSYQBZ_9.6.1}{Statistics}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Using%20an%20advanced%20filter?scope=SSYQBZ_9.6.1}{Using an advanced filter}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Statistics?scope=SSYQBZ_9.6.1}{Statistics}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Applying%20filtering%20to%20the%20Module%20Explorer?scope=SSYQBZ_9.6.1}{Applying filtering to the Module Explorer}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Turning%20filtering%20on%20and%20off?scope=SSYQBZ_9.6.1}{Turning filtering on and off}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Sorts?scope=SSYQBZ_9.6.1}{Sorts}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Sorting?scope=SSYQBZ_9.6.1}{Sorting}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Turning%20sorting%20on%20and%20off?scope=SSYQBZ_9.6.1}{Turning sorting on and off}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Searching%20with%20regular%20expressions?scope=SSYQBZ_9.6.1}{Searching with regular expressions} \\
+
+
+
+\begin{Large}\textbf{Chapter 8: Using attributes} \end{Large} 
+\vspace{1mm}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/System%20attributes?scope=SSYQBZ_9.6.1}{System attributes}
+
+% \href{https://www.ibm.com/support/knowledgecenter/search/Attribute%20types?scope=SSYQBZ_9.6.1}{Attribute types}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Showing%20attribute%20types?scope=SSYQBZ_9.6.1}{Showing attribute types}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Creating%20an%20attribute%20type?scope=SSYQBZ_9.6.1}{Creating an attribute type}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Controlling%20access%20to%20an%20attribute%20type?scope=SSYQBZ_9.6.1}{Controlling access to an attribute type}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Editing%20an%20attribute%20type?scope=SSYQBZ_9.6.1}{Editing an attribute type}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Deleting%20an%20attribute%20type?scope=SSYQBZ_9.6.1}{Deleting an attribute type}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Showing%20attribute%20definitions?scope=SSYQBZ_9.6.1}{Showing attribute definitions}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Creating%20an%20attribute%20definition?scope=SSYQBZ_9.6.1}{Creating an attribute definition}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Creating%20a%20new%20DXL%20attribute?scope=SSYQBZ_9.6.1}{Creating a new DXL attribute}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Controlling%20access%20to%20an%20attribute%20definition?scope=SSYQBZ_9.6.1}{Controlling access to an attribute definition}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Controlling%20access%20to%20an%20attribute%20value?scope=SSYQBZ_9.6.1}{Controlling access to an attribute value}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Editing%20an%20attribute%20definition?scope=SSYQBZ_9.6.1}{Editing an attribute definition}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Editing%20a%20DXL%20attribute%20definition?scope=SSYQBZ_9.6.1}{Editing a DXL attribute definition}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Sharing%20attribute%20and%20type%20definitions?scope=SSYQBZ_9.6.1}{Sharing attribute and type definitions}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Deleting%20an%20attribute%20definition?scope=SSYQBZ_9.6.1}{Deleting an attribute definition}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/DXL%20attributes%20and%20layout%20DXL%20columns?scope=SSYQBZ_9.6.1}{DXL attributes and layout DXL columns}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Copying%20attribute%20values?scope=SSYQBZ_9.6.1}{Copying attribute values}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Measuring%20the%20frequency%20of%20attribute%20values?scope=SSYQBZ_9.6.1}{Measuring the frequency of attribute values} \\
+
+\newpage
+
+\begin{Large}\textbf{Chapter 9: Viewing data in formal modules} \end{Large} 
+\vspace{1mm}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Navigating%20using%20the%20keyboard?scope=SSYQBZ_9.6.1}{Navigating using the keyboard}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/The%20view%20menu?scope=SSYQBZ_9.6.1}{The view menu}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/The%20Module%20Explorer?scope=SSYQBZ_9.6.1}{The Module Explorer}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Display%20modes?scope=SSYQBZ_9.6.1}{Display modes}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Changing%20the%20display%20mode?scope=SSYQBZ_9.6.1}{Changing the display mode}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Selecting%20the%20attributes%20shown%20in%20graphics%20mode?scope=SSYQBZ_9.6.1}{Selecting the attributes shown in graphics mode}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Controlling%20display%20levels?scope=SSYQBZ_9.6.1}{Controlling display levels}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Controlling%20table%20attribute%20display?scope=SSYQBZ_9.6.1}{Controlling table attribute display}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Outlining?scope=SSYQBZ_9.6.1}{Outlining}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Compression?scope=SSYQBZ_9.6.1}{Compression}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Working%20with%20columns?scope=SSYQBZ_9.6.1}{Working with columns}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Showing%20column%20information?scope=SSYQBZ_9.6.1}{Showing column information}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Adding%20a%20column?scope=SSYQBZ_9.6.1}{Adding a column}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Editing%20column%20information?scope=SSYQBZ_9.6.1}{Editing column information}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Color-coding%20your%20data?scope=SSYQBZ_9.6.1}{Color-coding your data}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Adding%20a%20graph%20column?scope=SSYQBZ_9.6.1}{Adding a graph column}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Adding%20an%20icon%20column?scope=SSYQBZ_9.6.1}{Adding an icon column} \\
+
+
+
+\begin{Large}\textbf{Chapter 10: The Module Comparison Wizard} \end{Large} 
+\vspace{1mm}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/What%20is%20the%20Module%20Comparison%20Wizard%20used%20for??scope=SSYQBZ_9.6.1}{What is the Module Comparison Wizard used for?}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/How%20does%20the%20Module%20Comparison%20Wizard%20work??scope=SSYQBZ_9.6.1}{How does the Module Comparison Wizard work?}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Running%20the%20Module%20Comparison%20Wizard?scope=SSYQBZ_9.6.1}{Running the Module Comparison Wizard}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/The%20redline%20markup%20column?scope=SSYQBZ_9.6.1}{The redline markup column} \\
+
+
+
+\begin{Large}\textbf{Chapter 11: Working with tables} \end{Large} 
+\vspace{1mm}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Tables?scope=SSYQBZ_9.6.1}{Tables}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Creating%20a%20table?scope=SSYQBZ_9.6.1}{Creating a table}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Inserting%20a%20module%20as%20a%20table?scope=SSYQBZ_9.6.1}{Inserting a module as a table}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Inserting%20rows?scope=SSYQBZ_9.6.1}{Inserting rows}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Inserting%20columns?scope=SSYQBZ_9.6.1}{Inserting columns}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Changing%20table%20properties?scope=SSYQBZ_9.6.1}{Changing table properties}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Deleting,%20undeleting%20and%20purging%20tables?scope=SSYQBZ_9.6.1}{Deleting, undeleting and purging tables} \\
+
+\newpage
+
+\begin{Large}\textbf{Chapter 12: Working with pictures and OLE objects} \end{Large} 
+\vspace{1mm}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Working%20with%20pictures?scope=SSYQBZ_9.6.1}{Working with pictures}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/OLE%20objects?scope=SSYQBZ_9.6.1}{OLE objects}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Activating%20and%20deactivating%20an%20OLE%20object?scope=SSYQBZ_9.6.1}{Activating and deactivating an OLE object}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Inserting%20a%20new%20OLE%20object?scope=SSYQBZ_9.6.1}{Inserting a new OLE object}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Inserting%20an%20existing%20file%20as%20an%20OLE%20object?scope=SSYQBZ_9.6.1}{Inserting an existing file as an OLE object}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Resizing%20OLE%20objects?scope=SSYQBZ_9.6.1}{Resizing OLE objects}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Cutting,%20copying%20and%20pasting%20OLE%20objects?scope=SSYQBZ_9.6.1}{Cutting, copying and pasting OLE objects}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Editing%20OLE%20object%20properties?scope=SSYQBZ_9.6.1}{Editing OLE object properties}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Deleting%20OLE%20objects?scope=SSYQBZ_9.6.1}{Deleting OLE objects}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/OLE%20objects%20and%20history?scope=SSYQBZ_9.6.1}{OLE objects and history}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Setting%20the%20OLE%20open%20limit?scope=SSYQBZ_9.6.1}{Setting the OLE open limit}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Registered%20and%20Unregistered%20OLE%20Objects?scope=SSYQBZ_9.6.1}{Registered and Unregistered OLE Objects}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Actions%20affected%20by%20changes%20to%20the%20handling%20of%20OLE%20objects?scope=SSYQBZ_9.6.1}{Actions affected by changes to the handling of OLE objects}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Edit%20in-place%20or%20using%20the%20object%20properties%20sheet.?scope=SSYQBZ_9.6.1}{Edit in-place or using the object properties sheet.}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Copy%20and%20paste%20in-place%20or%20using%20the%20object%20properties%20sheet?scope=SSYQBZ_9.6.1}{Copy and paste in-place or using the object properties sheet}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Cut%20and%20paste%20in-place%20or%20using%20the%20Object%20properties%20sheet?scope=SSYQBZ_9.6.1}{Cut and paste in-place or using the Object properties sheet}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Copy%20or%20cut%20a%20Rational%20DOORS%20object%20containing%20an%20unregistered%20OLE%20object%20in%20an%20attribute%20177?scope=SSYQBZ_9.6.1}{Copy or cut a Rational DOORS object containing an unregistered OLE object in an attribute 177}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Copy%20objects%20using%20the%20Object%20Copier?scope=SSYQBZ_9.6.1}{Copy objects using the Object Copier}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Change%20Proposal%20System?scope=SSYQBZ_9.6.1}{Change Proposal System}
+
+\,\,\, \,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Submit%20a%20change%20proposal?scope=SSYQBZ_9.6.1}{Submit a change proposal}
+
+\,\,\, \,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Review%20change%20proposals?scope=SSYQBZ_9.6.1}{Review change proposals}
+
+\,\,\, \,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Apply%20change%20proposals?scope=SSYQBZ_9.6.1}{Apply change proposals}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/DXL?scope=SSYQBZ_9.6.1}{DXL}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/History?scope=SSYQBZ_9.6.1}{History}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Split%20Object?scope=SSYQBZ_9.6.1}{Split Object}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Export%20data%20from%20Rational%20DOORS?scope=SSYQBZ_9.6.1}{Export data from Rational DOORS}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Paste%20unregistered%20OLE%20objects%20into%20other%20applications?scope=SSYQBZ_9.6.1}{Paste unregistered OLE objects into other applications}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Spelling%20checker?scope=SSYQBZ_9.6.1}{Spelling checker}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Actions%20unaffected%20by%20changes%20to%20the%20handling%20of%20OLE%20objects?scope=SSYQBZ_9.6.1}{Actions unaffected by changes to the handling of OLE objects}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Merge%20Objects?scope=SSYQBZ_9.6.1}{Merge Objects}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Create%20a%20Baseline?scope=SSYQBZ_9.6.1}{Create a Baseline}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Copy%20a%20baseline?scope=SSYQBZ_9.6.1}{Copy a baseline}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Clone%20a%20module?scope=SSYQBZ_9.6.1}{Clone a module}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Cut%20or%20Copy%20modules%20in%20the%20Database%20Explorer?scope=SSYQBZ_9.6.1}{Cut or Copy modules in the Database Explorer}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Import%20data%20to%20Rational%20DOORS?scope=SSYQBZ_9.6.1}{Import data to Rational DOORS}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Archive%20and%20restore?scope=SSYQBZ_9.6.1}{Archive and restore}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Partition/Rejoin?scope=SSYQBZ_9.6.1}{Partition/Rejoin}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Find%20and%20Replace?scope=SSYQBZ_9.6.1}{Find and Replace}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Linking?scope=SSYQBZ_9.6.1}{Linking} \\
+
+
+
+\begin{Large}\textbf{Chapter 13: Access rights} \end{Large} 
+\vspace{1mm}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/About%20access%20rights?scope=SSYQBZ_9.6.1}{About access rights}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Full%20access%20and%20no%20access?scope=SSYQBZ_9.6.1}{Full access and no access}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/About%20groups?scope=SSYQBZ_9.6.1}{About groups}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/How%20group%20rights%20and%20user%20rights%20interact?scope=SSYQBZ_9.6.1}{How group rights and user rights interact}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/When%20you%20are%20in%20several%20groups?scope=SSYQBZ_9.6.1}{When you are in several groups}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/About%20inheritance?scope=SSYQBZ_9.6.1}{About inheritance}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Inheritance%20example?scope=SSYQBZ_9.6.1}{Inheritance example}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Propagating%20extra%20access%20rights%20with%20create?scope=SSYQBZ_9.6.1}{Propagating extra access rights with create} \\
+
+\newpage
+
+\begin{Large}\textbf{Chapter 14: Managing folders} \end{Large} 
+\vspace{1mm}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Creating%20a%20folder?scope=SSYQBZ_9.6.1}{Creating a folder}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Controlling%20access%20to%20a%20folder?scope=SSYQBZ_9.6.1}{Controlling access to a folder}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Editing%20folder%20properties?scope=SSYQBZ_9.6.1}{Editing folder properties}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Deleting,%20undeleting%20and%20purging%20a%20folder?scope=SSYQBZ_9.6.1}{Deleting, undeleting and purging a folder}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Managing%20locks?scope=SSYQBZ_9.6.1}{Managing locks} \\
+
+
+
+\begin{Large}\textbf{Chapter 15: Links} \end{Large} 
+\vspace{1mm}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Links?scope=SSYQBZ_9.6.1}{Links}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/External%20links?scope=SSYQBZ_9.6.1}{External links}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Link%20arrows?scope=SSYQBZ_9.6.1}{Link arrows}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Creating%20links?scope=SSYQBZ_9.6.1}{Creating links}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Using%20drag-and-drop?scope=SSYQBZ_9.6.1}{Using drag-and-drop}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Explicitly%20defining%20the%20link%20start?scope=SSYQBZ_9.6.1}{Explicitly defining the link start}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Creating%20and%20editing%20external%20links?scope=SSYQBZ_9.6.1}{Creating and editing external links}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Clearing%20the%20link%20start?scope=SSYQBZ_9.6.1}{Clearing the link start}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Link%20modules%20and%20linksets?scope=SSYQBZ_9.6.1}{Link modules and linksets}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Rational%20DOORS%20Links,%20the%20default%20link%20modules?scope=SSYQBZ_9.6.1}{Rational DOORS Links, the default link modules}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Why%20use%20other%20link%20modules??scope=SSYQBZ_9.6.1}{Why use other link modules?}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Controlling%20access%20to%20a%20link%20module?scope=SSYQBZ_9.6.1}{Controlling access to a link module}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/How%20copy%20and%20move%20affect%20links?scope=SSYQBZ_9.6.1}{How copy and move affect links}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Editing%20links?scope=SSYQBZ_9.6.1}{Editing links}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Creating%20link%20attributes?scope=SSYQBZ_9.6.1}{Creating link attributes}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Deleting%20links?scope=SSYQBZ_9.6.1}{Deleting links}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Creating%20links%20in%20bulk?scope=SSYQBZ_9.6.1}{Creating links in bulk}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Linking%20by%20attribute?scope=SSYQBZ_9.6.1}{Linking by attribute}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Link%20module%20defaults?scope=SSYQBZ_9.6.1}{Link module defaults}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Changing%20the%20default%20link%20module?scope=SSYQBZ_9.6.1}{Changing the default link module}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Creating%20default%20linkset%20pairings?scope=SSYQBZ_9.6.1}{Creating default linkset pairings}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Control%20on%20links%20for%20process%20management?scope=SSYQBZ_9.6.1}{Control on links for process management}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Showing%20link%20module%20information?scope=SSYQBZ_9.6.1}{Showing link module information}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Creating%20a%20link%20module?scope=SSYQBZ_9.6.1}{Creating a link module}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Working%20with%20link%20modules?scope=SSYQBZ_9.6.1}{Working with link modules}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Creating%20a%20linkset?scope=SSYQBZ_9.6.1}{Creating a linkset}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Deleting%20a%20linkset?scope=SSYQBZ_9.6.1}{Deleting a linkset} \\
+
+
+
+\begin{Large}\textbf{Chapter 16: Discussions} \end{Large} 
+\vspace{1mm}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/About%20discussions?scope=SSYQBZ_9.6.1}{About discussions}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Controlling%20access%20for%20discussions%20in%20a%20module?scope=SSYQBZ_9.6.1}{Controlling access for discussions in a module}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Creating%20a%20module%20discussion?scope=SSYQBZ_9.6.1}{Creating a module discussion}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Viewing%20a%20module%20discussion?scope=SSYQBZ_9.6.1}{Viewing a module discussion}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Adding%20a%20comment%20to%20a%20module%20discussion?scope=SSYQBZ_9.6.1}{Adding a comment to a module discussion}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Closing%20a%20module%20discussion?scope=SSYQBZ_9.6.1}{Closing a module discussion}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Deleting%20a%20module%20discussion?scope=SSYQBZ_9.6.1}{Deleting a module discussion}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Reopening%20a%20module%20discussion?scope=SSYQBZ_9.6.1}{Reopening a module discussion}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Creating%20an%20object%20discussion?scope=SSYQBZ_9.6.1}{Creating an object discussion}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Viewing%20an%20object%20discussion?scope=SSYQBZ_9.6.1}{Viewing an object discussion}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Adding%20a%20comment%20to%20an%20object%20discussion?scope=SSYQBZ_9.6.1}{Adding a comment to an object discussion}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Closing%20an%20object%20discussion?scope=SSYQBZ_9.6.1}{Closing an object discussion}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Deleting%20an%20object%20discussion?scope=SSYQBZ_9.6.1}{Deleting an object discussion}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Reopening%20an%20object%20discussion?scope=SSYQBZ_9.6.1}{Reopening an object discussion} \\
+
+\newpage
+
+\begin{Large}\textbf{Chapter 17: Tracking changes and traceability} \end{Large} 
+\vspace{1mm}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Change%20bars?scope=SSYQBZ_9.6.1}{Change bars}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Showing%20module%20history?scope=SSYQBZ_9.6.1}{Showing module history}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Redlining?scope=SSYQBZ_9.6.1}{Redlining}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Link%20analysis?scope=SSYQBZ_9.6.1}{Link analysis}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Running%20a%20link%20analysis?scope=SSYQBZ_9.6.1}{Running a link analysis}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Traceability%20columns?scope=SSYQBZ_9.6.1}{Traceability columns}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Adding%20a%20traceability%20column?scope=SSYQBZ_9.6.1}{Adding a traceability column}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Using%20the%20traceability%20explorer?scope=SSYQBZ_9.6.1}{Using the traceability explorer}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Navigating?scope=SSYQBZ_9.6.1}{Navigating}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Suspect%20links?scope=SSYQBZ_9.6.1}{Suspect links}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Showing%20suspect%20links?scope=SSYQBZ_9.6.1}{Showing suspect links}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Filtering%20on%20suspect%20links?scope=SSYQBZ_9.6.1}{Filtering on suspect links}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Displaying%20suspect%20link%20indicators?scope=SSYQBZ_9.6.1}{Displaying suspect link indicators}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Displaying%20the%20last%20change?scope=SSYQBZ_9.6.1}{Displaying the last change}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Displaying%20all%20suspect%20link%20information?scope=SSYQBZ_9.6.1}{Displaying all suspect link information}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Clearing%20suspect%20links?scope=SSYQBZ_9.6.1}{Clearing suspect links}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Access%20rights%20required%20for%20clearing%20suspect%20links?scope=SSYQBZ_9.6.1}{Access rights required for clearing suspect links}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Using%20the%20Clear%20function?scope=SSYQBZ_9.6.1}{Using the Clear function}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Using%20the%20clear%20all%20function?scope=SSYQBZ_9.6.1}{Using the clear all function}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Checking%20data%20against%20history?scope=SSYQBZ_9.6.1}{Checking data against history} \\
+
+
+
+\begin{Large}\textbf{Chapter 18: Using baselines} \end{Large} 
+\vspace{1mm}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Baselines?scope=SSYQBZ_9.6.1}{Baselines}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Using%20baselines%20to%20improve%20performance?scope=SSYQBZ_9.6.1}{Using baselines to improve performance}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Viewing%20a%20baseline?scope=SSYQBZ_9.6.1}{Viewing a baseline}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Baselining%20groups%20of%20modules?scope=SSYQBZ_9.6.1}{Baselining groups of modules}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Creating%20a%20baseline?scope=SSYQBZ_9.6.1}{Creating a baseline}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Copying%20a%20baseline?scope=SSYQBZ_9.6.1}{Copying a baseline}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Comparing%20baselines?scope=SSYQBZ_9.6.1}{Comparing baselines}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Deleting%20a%20baseline?scope=SSYQBZ_9.6.1}{Deleting a baseline} \\
+
+
+
+\begin{Large}\textbf{Chapter 19: Using Electronic Signatures} \end{Large} 
+\vspace{1mm}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Viewing%20signatures?scope=SSYQBZ_9.6.1}{Viewing signatures}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Signing%20a%20baseline?scope=SSYQBZ_9.6.1}{Signing a baseline}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Including%20signature%20information%20in%20printouts?scope=SSYQBZ_9.6.1}{Including signature information in printouts} \\
+
+
+
+\begin{Large}\textbf{Chapter 20: Printing reports} \end{Large} 
+\vspace{1mm}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Applying%20saved%20page%20setups?scope=SSYQBZ_9.6.1}{Applying saved page setups}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Creating%20page%20setups?scope=SSYQBZ_9.6.1}{Creating page setups}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Printing%20a%20module?scope=SSYQBZ_9.6.1}{Printing a module}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Using%20print%20preview?scope=SSYQBZ_9.6.1}{Using print preview}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Creating%20a%20report?scope=SSYQBZ_9.6.1}{Creating a report}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Printing%20and%20managing%20reports?scope=SSYQBZ_9.6.1}{Printing and managing reports} \\
+
+
+\newpage
+
+\begin{Large}\textbf{Chapter 21: Importing} \end{Large} 
+\vspace{1mm}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Importing%20from%20Microsoft%20Word?scope=SSYQBZ_9.6.1}{Importing from Microsoft Word}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Editing%20imported%20Word%20style%20information?scope=SSYQBZ_9.6.1}{Editing imported Word style information}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Importing%20plain%20text%20files?scope=SSYQBZ_9.6.1}{Importing plain text files}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Basic%20import%20options?scope=SSYQBZ_9.6.1}{Basic import options}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Controlling%20text%20decomposition?scope=SSYQBZ_9.6.1}{Controlling text decomposition}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Attribute%20value%20assignment?scope=SSYQBZ_9.6.1}{Attribute value assignment}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Advanced%20importing%20options?scope=SSYQBZ_9.6.1}{Advanced importing options}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Controlling%20list%20import?scope=SSYQBZ_9.6.1}{Controlling list import}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Capturing%20embedded%20data?scope=SSYQBZ_9.6.1}{Capturing embedded data}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Controlling%20line%20breaks%20and%20Chapter%20numbering?scope=SSYQBZ_9.6.1}{Controlling line breaks and Chapter numbering}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Importing%20plain%20text?scope=SSYQBZ_9.6.1}{Importing plain text}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Using%20the%20import%20plain%20text%20advanced%20options?scope=SSYQBZ_9.6.1}{Using the import plain text advanced options}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Adding%20and%20removing%20keywords%20or%20abbreviations?scope=SSYQBZ_9.6.1}{Adding and removing keywords or abbreviations}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Importing%20RTF%20files?scope=SSYQBZ_9.6.1}{Importing RTF files}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Importing%20spreadsheet%20files?scope=SSYQBZ_9.6.1}{Importing spreadsheet files}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Importing%20a%20spreadsheet%20or%20database%20file?scope=SSYQBZ_9.6.1}{Importing a spreadsheet or database file}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Defining%20attribute%20lists%20for%20import?scope=SSYQBZ_9.6.1}{Defining attribute lists for import}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Using%20attribute%20list%20elements%20for%20import?scope=SSYQBZ_9.6.1}{Using attribute list elements for import}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Loading%20saved%20attribute%20lists%20for%20import?scope=SSYQBZ_9.6.1}{Loading saved attribute lists for import}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Choosing%20attribute%20types?scope=SSYQBZ_9.6.1}{Choosing attribute types}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Importing%20FrameMaker%20files?scope=SSYQBZ_9.6.1}{Importing FrameMaker files}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Importing%20a%20MIF%20file?scope=SSYQBZ_9.6.1}{Importing a MIF file}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Using%20the%20import%20MIF%20advanced%20options?scope=SSYQBZ_9.6.1}{Using the import MIF advanced options} \\
+
+
+
+\begin{Large}\textbf{Chapter 22: Exporting} \end{Large} 
+\vspace{1mm}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Exporting%20to%20Microsoft%20Word?scope=SSYQBZ_9.6.1}{Exporting to Microsoft Word}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Exporting%20to%20Microsoft%20Excel?scope=SSYQBZ_9.6.1}{Exporting to Microsoft Excel}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Exporting%20to%20Microsoft%20Outlook?scope=SSYQBZ_9.6.1}{Exporting to Microsoft Outlook}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Exporting%20to%20Microsoft%20PowerPoint?scope=SSYQBZ_9.6.1}{Exporting to Microsoft PowerPoint}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Exporting%20to%20HTML?scope=SSYQBZ_9.6.1}{Exporting to HTML}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Exporting%20to%20plain%20text?scope=SSYQBZ_9.6.1}{Exporting to plain text}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Exporting%20to%20RTF?scope=SSYQBZ_9.6.1}{Exporting to RTF}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Exporting%20to%20spreadsheet?scope=SSYQBZ_9.6.1}{Exporting to spreadsheet}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Exporting%20to%20FrameMaker?scope=SSYQBZ_9.6.1}{Exporting to FrameMaker} \\
+
+\newpage
+
+\begin{Large}\textbf{Chapter 23: Using the Change Proposal System} \end{Large} 
+\vspace{1mm}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/The%20Change%20Proposal%20System?scope=SSYQBZ_9.6.1}{The Change Proposal System}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Change%20proposals%20and%20suggestions?scope=SSYQBZ_9.6.1}{Change proposals and suggestions}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Change%20proposal%20roles?scope=SSYQBZ_9.6.1}{Change proposal roles}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Change%20proposal%20partner%20modules?scope=SSYQBZ_9.6.1}{Change proposal partner modules}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Duplicate%20sets?scope=SSYQBZ_9.6.1}{Duplicate sets}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Groups?scope=SSYQBZ_9.6.1}{Groups}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Creating%20groups?scope=SSYQBZ_9.6.1}{Creating groups}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Editing%20groups?scope=SSYQBZ_9.6.1}{Editing groups}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Submitting%20a%20change%20proposal?scope=SSYQBZ_9.6.1}{Submitting a change proposal}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Submitting%20a%20suggestion?scope=SSYQBZ_9.6.1}{Submitting a suggestion}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/The%20review%20process?scope=SSYQBZ_9.6.1}{The review process}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Showing%20and%20reviewing%20individual%20change%20proposals?scope=SSYQBZ_9.6.1}{Showing and reviewing individual change proposals}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Showing%20and%20reviewing%20groups?scope=SSYQBZ_9.6.1}{Showing and reviewing groups}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Showing%20and%20reviewing%20suggestions?scope=SSYQBZ_9.6.1}{Showing and reviewing suggestions}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Showing%20information%20about%20change%20proposals?scope=SSYQBZ_9.6.1}{Showing information about change proposals}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Managing%20duplicate%20sets?scope=SSYQBZ_9.6.1}{Managing duplicate sets}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Checking%20the%20approved%20changes?scope=SSYQBZ_9.6.1}{Checking the approved changes}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Applying%20the%20approved%20changes?scope=SSYQBZ_9.6.1}{Applying the approved changes} \\
+
+
+
+\begin{Large}\textbf{Chapter 24: Using Rational DOORS to manage your testing} \end{Large} 
+\vspace{1mm}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Test%20Tracking?scope=SSYQBZ_9.6.1}{Test Tracking}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Creating%20a%20test%20definition?scope=SSYQBZ_9.6.1}{Creating a test definition}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Updating%20test%20definitions?scope=SSYQBZ_9.6.1}{Updating test definitions}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Creating%20a%20form%20for%20recording%20test%20results?scope=SSYQBZ_9.6.1}{Creating a form for recording test results}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Preparing%20the%20module%20for%20a%20test%20run?scope=SSYQBZ_9.6.1}{Preparing the module for a test run}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Running%20tests?scope=SSYQBZ_9.6.1}{Running tests}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Comparing%20test%20runs?scope=SSYQBZ_9.6.1}{Comparing test runs} \\
+
+
+
+\begin{Large}\textbf{Chapter 25: Using descriptive modules} \end{Large} 
+\vspace{1mm}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Descriptive%20modules?scope=SSYQBZ_9.6.1}{Descriptive modules}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Controlling%20access%20to%20a%20descriptive%20module?scope=SSYQBZ_9.6.1}{Controlling access to a descriptive module}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Marking%20up%20a%20descriptive%20module?scope=SSYQBZ_9.6.1}{Marking up a descriptive module}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Extracting%20marked%20up%20objects?scope=SSYQBZ_9.6.1}{Extracting marked up objects}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Showing%20descriptive%20module%20properties?scope=SSYQBZ_9.6.1}{Showing descriptive module properties}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Displaying%20marked%20up%20items%20only?scope=SSYQBZ_9.6.1}{Displaying marked up items only} \\
+
+\newpage
+
+\begin{Large}\textbf{Chapter 26: Configuring Rational DOORS} \end{Large} 
+\vspace{1mm}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Showing%20your%20user%20options?scope=SSYQBZ_9.6.1}{Showing your user options}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Display%20schemes?scope=SSYQBZ_9.6.1}{Display schemes}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/High%20contrast%20display%20schemes?scope=SSYQBZ_9.6.1}{High contrast display schemes}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Changing%20your%20display%20scheme?scope=SSYQBZ_9.6.1}{Changing your display scheme}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Display%20scheme%20items?scope=SSYQBZ_9.6.1}{Display scheme items}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Items%20that%20affect%20Print%20Preview?scope=SSYQBZ_9.6.1}{Items that affect Print Preview}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Configuring%20the%20spelling%20checker?scope=SSYQBZ_9.6.1}{Configuring the spelling checker}
+
+\,\,\, \,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Available%20languages?scope=SSYQBZ_9.6.1}{Available languages}
+
+\,\,\, \,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Grammar?scope=SSYQBZ_9.6.1}{Grammar}
+
+\,\,\, \,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Checking%20options?scope=SSYQBZ_9.6.1}{Checking options}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Default%20language%20selection%20in%20Rational%20DOORS?scope=SSYQBZ_9.6.1}{Default language selection in Rational DOORS}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Adding%20words%20to%20the%20dictionary?scope=SSYQBZ_9.6.1}{Adding words to the dictionary}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Using%20the%20command%20line?scope=SSYQBZ_9.6.1}{Using the command line}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Summary%20of%20command%20line%20switches?scope=SSYQBZ_9.6.1}{Summary of command line switches}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Using%20shortcuts?scope=SSYQBZ_9.6.1}{Using shortcuts}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Settings%20in%20the%20registry?scope=SSYQBZ_9.6.1}{Settings in the registry}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/The%20EXPORTDIRECTORY%20keyword?scope=SSYQBZ_9.6.1}{The EXPORTDIRECTORY keyword}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/The%20EXPORTDIRECTORY%20environment%20variable?scope=SSYQBZ_9.6.1}{The EXPORTDIRECTORY environment variable}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Running%20Rational%20DOORS%20in%20batch%20mode?scope=SSYQBZ_9.6.1}{Running Rational DOORS in batch mode}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Configuring%20the%20Welcome%20Screen?scope=SSYQBZ_9.6.1}{Configuring the Welcome Screen}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Configuring%20Home?scope=SSYQBZ_9.6.1}{Configuring Home}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Configuring%20the%20links%20on%20the%20Welcome%20Screens?scope=SSYQBZ_9.6.1}{Configuring the links on the Welcome Screens}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Changing%20the%20email%20address%20of%20the%20problem%20report?scope=SSYQBZ_9.6.1}{Changing the email address of the problem report} \\
+
+
+
+\begin{Large}\textbf{Chapter 27: Rational DOORS buttons} \end{Large} 
+\vspace{1mm}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Module%20buttons?scope=SSYQBZ_9.6.1}{Module buttons}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Database%20buttons?scope=SSYQBZ_9.6.1}{Database buttons} \\
+
+
+
+\begin{Large}\textbf{Chapter 28: Using DXL} \end{Large} 
+\vspace{1mm}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/DXL?scope=SSYQBZ_9.6.1}{DXL}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Developing%20DXL%20programs?scope=SSYQBZ_9.6.1}{Developing DXL programs}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Browsing%20the%20DXL%20library?scope=SSYQBZ_9.6.1}{Browsing the DXL library}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Converting%20layout%20DXL%20to%20attribute%20DXL?scope=SSYQBZ_9.6.1}{Converting layout DXL to attribute DXL} \\
+
+
+
+\begin{Large}\textbf{Chapter 29: Keyboard shortcuts} \end{Large} 
+\vspace{1mm}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/CTRL%20keys?scope=SSYQBZ_9.6.1}{CTRL keys}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Rich%20text?scope=SSYQBZ_9.6.1}{Rich text}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Function%20keys?scope=SSYQBZ_9.6.1}{Function keys}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Keypad%20keys?scope=SSYQBZ_9.6.1}{Keypad keys}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Navigation%20Keys?scope=SSYQBZ_9.6.1}{Navigation Keys} \\
+
+
+\begin{Large}\textbf{Chapter 30: Contacting support} \end{Large} 
+\vspace{1mm}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Contacting%20IBM%20Rational%20Software%20Support?scope=SSYQBZ_9.6.1}{Contacting IBM Rational Software Support}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Prerequisites?scope=SSYQBZ_9.6.1}{Prerequisites}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Submitting%20problems?scope=SSYQBZ_9.6.1}{Submitting problems}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Other%20information?scope=SSYQBZ_9.6.1}{Other information} \\
+
+
+\begin{Large}\textbf{Chapter 31: Notices} \end{Large} 
+\vspace{1mm}
+
+\href{https://www.ibm.com/support/knowledgecenter/search/Trademarks?scope=SSYQBZ_9.6.1}{Trademarks}
+
+\,\,\, \href{https://www.ibm.com/support/knowledgecenter/search/Text%20proofing%20system%20copyrights?scope=SSYQBZ_9.6.1}{Text proofing system copyrights} \\
+
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%END OF DOCUMENT%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
